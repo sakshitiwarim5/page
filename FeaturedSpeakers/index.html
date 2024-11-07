@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Featured Speakers</title>
+    <link rel="stylesheet" href="dist/styles.css" />
+  </head>
+  <body>
+    <section class="featured-speakers">
+      <header class="featured-speakers__header">
+        <h2 class="featured-speakers__title">
+          View our Featured Speakers for the Event
+        </h2>
+        <p class="featured-speakers__subtitle">
+          Speakers are core contributors and industry thought leaders working at
+          <a href="#" class="featured-speakers__link">companies</a> that push
+          for innovation.
+        </p>
+      </header>
+
+      <!-- Speaker Info Section -->
+      <div class="speaker-info" id="speaker-info" style="display: none">
+        <img
+          src=""
+          alt="Speaker Image"
+          id="speakerImage"
+          class="featured-speakers__image"
+        />
+        <h3 id="speakerName" class="featured-speakers__name">Speaker Name</h3>
+        <p id="speakerPosition" class="featured-speakers__position">
+          Speaker Position
+        </p>
+        <p id="speakerCompany" class="featured-speakers__company">
+          Company Name
+        </p>
+        <p id="speakerDescription" class="modal__description">
+          Description content goes here Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Tempore cupiditate ratione neque blanditiis dolores
+          at reprehenderit tempora aspernatur quasi rerum iusto illo distinctio
+          laudantium, ipsam dignissimos, numquam suscipit expedita aliquid.
+        </p>
+      </div>
+
+      <div class="featured-speakers__slider">
+        <button
+          class="featured-speakers__slider-control featured-speakers__slider-control--prev"
+        >
+          &lt;
+        </button>
+
+        <div class="featured-speakers__cards">
+          <!-- Speaker Card -->
+          <article class="featured-speakers__card" data-index="0">
+            <img
+              src="https://shorturl.at/eQeAl"
+              alt="John Doe"
+              class="featured-speakers__image"
+            />
+            <h3 class="featured-speakers__name">John Doe</h3>
+            <p class="featured-speakers__position">Chief Marketing Officer</p>
+            <p class="featured-speakers__company">Acme Corp</p>
+          </article>
+          <article class="featured-speakers__card" data-index="1">
+            <img
+              src="https://shorturl.at/SXFZG"
+              alt="Jane Smith"
+              class="featured-speakers__image"
+            />
+            <h3 class="featured-speakers__name">Jane Smith</h3>
+            <p class="featured-speakers__position">CTO</p>
+            <p class="featured-speakers__company">Tech Innovations</p>
+          </article>
+          <article class="featured-speakers__card" data-index="2">
+            <img
+              src="https://shorturl.at/QPyAg"
+              alt="Alice Johnson"
+              class="featured-speakers__image"
+            />
+            <h3 class="featured-speakers__name">Alice Johnson</h3>
+            <p class="featured-speakers__position">Product Manager</p>
+            <p class="featured-speakers__company">Global Solutions</p>
+          </article>
+          <article class="featured-speakers__card" data-index="3">
+            <img
+              src="https://shorturl.at/82YPR"
+              alt="Bob Brown"
+              class="featured-speakers__image"
+            />
+            <h3 class="featured-speakers__name">Bob Brown</h3>
+            <p class="featured-speakers__position">Lead Developer</p>
+            <p class="featured-speakers__company">Innovatech</p>
+          </article>
+          <!-- Repeat additional cards as needed -->
+        </div>
+
+        <button
+          class="featured-speakers__slider-control featured-speakers__slider-control--next"
+        >
+          &gt;
+        </button>
+      </div>
+
+      <div class="featured-speakers__cta">
+        <a href="#" class="featured-speakers__program-button"
+          >See the Program</a
+        >
+        <p class="featured-speakers__program-text">
+          Click here to see the full program
+        </p>
+      </div>
+    </section>
+
+    <script src="dist/scripts.js"></script>
+  </body>
+</html>

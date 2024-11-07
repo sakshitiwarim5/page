@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Featured Speakers</title>
+    <link rel="stylesheet" href="dist/styles.css" />
+    <style>
+      /* Include your existing CSS here */
+      .featured-speakers {
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .featured-speakers__header {
+        margin-bottom: 1.5rem;
+      }
+
+      .featured-speakers__title {
+        font-size: 2.75rem; /* Increase the font size of the title */
+        font-weight: bold;
+        max-width: 1200px; /* Set maximum width to 1200px */
+        margin: 0 auto; /* Center align */
+      }
+
+      .featured-speakers__subtitle {
+        font-size: 1.5rem;
+        color: #666;
+      }
+
+      .featured-speakers__slider {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .featured-speakers__slider-control {
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #333;
+      }
+
+      .featured-speakers__slider-control--prev {
+        position: absolute;
+        left: 0;
+      }
+
+      .featured-speakers__slider-control--next {
+        position: absolute;
+        right: 0;
+      }
+
+      .featured-speakers__cards {
+        display: flex;
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+      }
+
+      .featured-speakers__card {
+        flex: 0 0 auto;
+        width: 285px; /* Fixed width */
+        height: 321px; /* Fixed height */
+        padding: 36px 21px; /* Custom padding */
+        background-color: #fff;
+        border-radius: 10px 0 0 0; /* Custom border radius */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        scroll-snap-align: start;
+        cursor: pointer; /* Indicate that the card is clickable */
+      }
+
+      .featured-speakers__image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 0.5rem;
+      }
+
+      .featured-speakers__name {
+        font-size: 2rem; /* Increase the font size of the card name */
+        font-weight: bold;
+      }
+
+      .featured-speakers__position {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .featured-speakers__company {
+        font-size: 1rem;
+        color: #888;
+      }
+
+      .featured-speakers__cta {
+        margin-top: 2rem;
+      }
+
+      .speaker-info {
+        margin: 20px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        display: none; /* Hidden by default */
+      }
+    </style>
+  </head>
+  <body>
+    <section class="featured-speakers">
+      <header class="featured-speakers__header">
+        <h2 class="featured-speakers__title">
+          View our Featured Speakers for the Event
+        </h2>
+        <p class="featured-speakers__subtitle">
+          Speakers are core contributors and industry thought leaders working at
+          <a href="#" class="featured-speakers__link">companies</a> that push
+          for innovation.
+        </p>
+      </header>
+
+      <div class="speaker-info" id="speaker-info">
+        <img
+          src=""
+          alt="Speaker Image"
+          id="speakerImage"
+          class="featured-speakers__image"
+        />
+        <h3 id="speakerName" class="featured-speakers__name">Speaker Name</h3>
+        <p id="speakerPosition" class="featured-speakers__position">
+          Speaker Position
+        </p>
+        <p id="speakerCompany" class="featured-speakers__company">
+          Company Name
+        </p>
+        <p id="speakerDescription" class="modal__description">
+          Description content goes here
+        </p>
+      </div>
+
+      <div class="featured-speakers__slider">
+        <button
+          class="featured-speakers__slider-control featured-speakers__slider-control--prev"
+        >
+          &lt;
+        </button>
+
+        <div class="featured-speakers__cards">
+          <!-- Speaker Card -->
+          <article class="featured-speakers__card" data-index="0">
+            <img
+              src="https://shorturl.at/eQeAl"
+              alt="John Doe"
+              class="featured-speakers__image"
+            />
+            <h3 class="featured-speakers__name">John Doe</h3>
+            <p class="featured-speakers__position">Chief Marketing Officer</p>
+            <p class="featured-speakers__company">Acme Corp</p>
+          </article>
+          <article class="featured-speakers__card" data-index="1">
+            <img
+              src="https://shorturl.at/SXFZG"
+              alt="Jane Smith"
+              class="featured-speakers__image"
+            />
+            <h3 class="featured-speakers__name">Jane Smith</h3>
+            <p class="featured-speakers__position">CTO</p>
+            <p class="featured-speakers__company">Tech Innovations</p>
+          </article>
+          <article class="featured-speakers__card" data-index="2">
+            <img
+              src="https://shorturl.at/QPyAg"
+              alt="Alice Johnson"
+              class="featured-speakers__image"
+            />
+            <h3 class="featured-speakers__name">Alice Johnson</h3>
+            <p class="featured-speakers__position">Product Manager</p>
+            <p class="featured-speakers__company">Global Solutions</p>
+          </article>
+          <article class="featured-speakers__card" data-index="3">
+            <img
+              src="https://shorturl.at/82YPR"
+              alt="Bob Brown"
+              class="featured-speakers__image"
+            />
+            <h3 class="featured-speakers__name">Bob Brown</h3>
+            <p class="featured-speakers__position">Lead Developer</p>
+            <p class="featured-speakers__company">Innovatech</p>
+          </article>
+          <!-- Repeat additional cards as needed -->
+        </div>
+
+        <button
+          class="featured-speakers__slider-control featured-speakers__slider-control--next"
+        >
+          &gt;
+        </button>
+      </div>
+
+      <div class="featured-speakers__cta">
+        <a href="#" class="featured-speakers__program-button"
+          >See the Program</a
+        >
+        <p class="featured-speakers__program-text">
+          Click here to see the full program
+        </p>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const speakerData = [
+          {
+            name: "John Doe",
+            position: "Chief Marketing Officer",
+            company: "Acme Corp",
+            description:
+              "John is an expert in marketing strategies and brand development.",
+            image: "https://shorturl.at/eQeAl",
+          },
+          {
+            name: "Jane Smith",
+            position: "CTO",
+            company: "Tech Innovations",
+            description:
+              "Jane is a leading expert in technology and innovation.",
+            image: "https://shorturl.at/SXFZG",
+          },
+          {
+            name: "Alice Johnson",
+            position: "Product Manager",
+            company: "Global Solutions",
+            description:
+              "Alice excels in product management and user experience design.",
+            image: "https://shorturl.at/QPyAg",
+          },
+          {
+            name: "Bob Brown",
+            position: "Lead Developer",
+            company: "Innovatech",
+            description:
+              "Bob specializes in software development and team leadership.",
+            image: "https://shorturl.at/82YPR",
+          },
+        ];
+
+        const cards = document.querySelectorAll(".featured-speakers__card");
+        const speakerInfo = document.getElementById("speaker-info");
+        const speakerName = document.getElementById("speakerName");
+        const speakerPosition = document.getElementById("speakerPosition");
+        const speakerCompany = document.getElementById("speakerCompany");
+        const speakerDescription =
+          document.getElementById("speakerDescription");
+        const speakerImage = document.getElementById("speakerImage");
+
+        // Open Speaker Info and populate data
+        cards.forEach((card) => {
+          card.addEventListener("click", () => {
+            const index = card.getAttribute("data-index");
+            const speaker = speakerData[index];
+
+            // Populate speaker info
+            speakerName.textContent = speaker.name;
+            speakerPosition.textContent = speaker.position;
+            speakerCompany.textContent = speaker.company;
+            speakerDescription.textContent = speaker.description;
+            speakerImage.src = speaker.image;
+
+            speakerInfo.style.display = "block"; // Show speaker info
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+.featured-speakers {
+  text-align: center;
+  padding: 2rem;
+}
+.featured-speakers__header {
+  margin-bottom: 1.5rem;
+}
+.featured-speakers__title {
+  font-size: 2.75rem;
+  font-weight: bold;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.featured-speakers__subtitle {
+  font-size: 1.5rem;
+  color: #666;
+}
+.featured-speakers__subtitle .featured-speakers__link {
+  color: #0073e6;
+  text-decoration: underline;
+}
+.featured-speakers__slider {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.featured-speakers__slider-control {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+.featured-speakers__slider-control--prev {
+  position: absolute;
+  left: 0;
+}
+.featured-speakers__slider-control--next {
+  position: absolute;
+  right: 0;
+}
+.featured-speakers__cards {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.featured-speakers__cards::-webkit-scrollbar {
+  display: none;
+}
+.featured-speakers__card {
+  flex: 0 0 auto;
+  width: 285px;
+  height: 321px;
+  padding: 36px 21px 36px 21px;
+  background-color: #fff;
+  border-radius: 10px 0 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  scroll-snap-align: start;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  padding-left: 70px;
+}
+.featured-speakers__image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+.featured-speakers__name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.featured-speakers__position {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+.featured-speakers__company {
+  font-size: 1rem;
+  color: #888;
+}
+.featured-speakers__cta {
+  margin-top: 2rem;
+}
+.featured-speakers__cta .featured-speakers__program-button {
+  background-color: #0056b3;
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  padding: 0.75rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+.featured-speakers__cta .featured-speakers__program-text {
+  margin-top: 1rem;
+  color: #333;
+  font-size: 0.9rem;
+}
+.featured-speakers .speaker-info {
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  display: none;
+  border-radius: 5px;
+  line-height: 1.2;
+}
+
+/*# sourceMappingURL=styles.css.map */
